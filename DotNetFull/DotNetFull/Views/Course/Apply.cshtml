@@ -1,0 +1,38 @@
+﻿@model Student
+@{
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/css/style.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+</head>
+<body>
+    <form asp-controller="course" method="POST" asp-action="Apply2">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label asp-for="WillAttend">WillAttend</label>
+            <select asp-for="WillAttend" /> 
+            <option value="">Select an option</option>
+            <option value="true">yes</option>
+            <option value="false">no</option>
+            </select>
+        </p>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>

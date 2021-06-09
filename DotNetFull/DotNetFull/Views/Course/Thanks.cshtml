@@ -1,0 +1,26 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <h2>@Model.Name</h2>
+    <hr />
+    @if (Model.WillAttend == true)
+    {
+        @:Kursa katılmış olduğundan dolayı çok mutlu olduk.
+    }
+    else
+    {
+        @:Kursa katılmadığınızdan dolayı üzüldük.
+    }
+<a asp-action="List">Kursa katılanları göster</a>
+</body>
+</html>

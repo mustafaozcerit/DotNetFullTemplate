@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Student> 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>
+                        @student.Name
+                    </td>
+                    <td>
+                        @student.Email
+                    </td>
+                    <td>
+                        @student.Phone
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="about">Düzgün bir sayfaya git</a>
+</body>
+</html>
